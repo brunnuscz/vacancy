@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\VacancyController;
+
+Route::get('/', [VacancyController::class, 'index']);
+Route::get('/vacancies/create', [VacancyController::class, 'create'])->middleware('auth');
+Route::get('/dashboard', [VacancyController::class, 'dashboard'])->middleware('auth');
+
+Route::post('/vacancies', [VacancyController::class, 'store']);
+

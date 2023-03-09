@@ -9,10 +9,14 @@ header{
     background-color: #fff;
     border-bottom: 1px solid #ccc;
 }
-.row{
-    margin: 0;
+.msg{
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
 }
-
 /*NAVBAR*/
 .navbar-color{
     background-color: #122526;
@@ -117,4 +121,51 @@ header{
 }
 .btn-ver-mais{
     text-align: center;
+}
+
+/*VACANCY CREATE PAGE*/
+#vacancy-create-container{
+    padding: 30px;
+    margin-top: 15px;
+    border: 1px solid #134d5785;
+    border-radius: 25px;
+}
+#vacancy-create-container h1{
+    text-align: center;
+}
+#vacancy-create-container label{
+    font-weight: bold;
+}
+#vacancy-create-container input,
+#vacancy-create-container select{
+    font-size: 12px;
+}
+#vacancy-create-container .btn-criar{
+    text-align: center;
+}
+
+/*dashboard*/
+.dashboard-title-container{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+.dashboard-title-container h1{
+    color: #122526;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.dashboard-title-container th{
+    width: 25%;
+}
+.dashboard-events-container form{
+    display: inline-block;
+}
+.dashboard-title-container p{
+    text-align: center;
+}
+.edit-btn{
+    margin: 5px;
+    width: 120px;
 }

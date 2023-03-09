@@ -9,23 +9,44 @@
     </form>
 </div>
 
-<div class="title-vacancy col-md-12">
-    <h2>Vagas disponíveis</h2>
-</div>
-
-<div id="vacancy-container">    
+@if($search)
+    <div class="title-vacancy col-md-12">
+        <h2>Pesquisando por: {{$search}}</h2>
+    </div>
+@else
+    <div class="title-vacancy col-md-12">
+        <h2>Vagas disponíveis</h2>
+    </div>
+@endif  
+<div id="vacancy-container">
     <div id="cards-container" class="row">
-        <div class="card col-md-3">
-            <div class="card-body">
-                <h5 class="card-title">Desenvolvedor Front-end</h5>
-                <p class="card-info"><strong>Tipo da vaga: </strong>Remoto</p>
-                <p class="card-info"><strong>Nível: </strong>Júnior</p>
-                <p class="card-info"><strong>Local: </strong>Teresina</p>
-                <div class="btn-ver-mais">
-                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-eye"></i> Ver mais</a>
+        @foreach($vacancies as $vacancy)
+            <div class="card col-md-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{$vacancy->title}}</h5>
+                    <p class="card-info"><strong>Tipo da vaga: </strong>{{$vacancy->type}}</p>
+                    <p class="card-info"><strong>Nível: </strong>{{$vacancy->level}}</p>
+                    <p class="card-info"><strong>Local: </strong>{{$vacancy->local}}</p>
+                    <div class="btn-ver-mais">
+                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verMaisDaVaga{{$vacancy->id}}"><i class="fa-solid fa-eye"></i> Ver mais</a>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- MODAL VER MAIS DA VAGA -->
+            <div class="modal " id="verMaisDaVaga{{$vacancy->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col">
+                                    {{$vacancy->title}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
 </div>
 
