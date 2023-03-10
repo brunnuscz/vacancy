@@ -30,13 +30,25 @@ class VacancyController extends Controller
         $candidates = $user->candidates;
         return view('dashboard', ['vacancies' => $vacancies, 'candidates' => $candidates]);
     }
-    
+
+    // VER MAIS VAGA
+    public function showVacancy($id){
+        $vacancy = Vacancy::findOrFail($id);
+        $user = auth()->user();
+        $candidates = $user->candidates;
+        $creator = User::where('id', $vacancy->user_id)->first()->toArray();
+        return view('vacancies.show-vacancy', ['vacancy' => $vacancy, 'creator' => $creator, 'candidates' => $candidates]);
+    }
     // FORMULÁRIO DE CRIAR VAGA
     public function createVacancy(){
         return view('vacancies.create-vacancy');
     }
     // CRIANDO VAGA
     public function storeVacancy(Request $request){
+        $request -> validate([
+            'title' => 'required',
+            'local' => 'required'
+        ]);
         $vacancy = new Vacancy;
 
         $vacancy->title = $request->title;
@@ -68,6 +80,10 @@ class VacancyController extends Controller
     }
     // ATUALIZAR VAGA
     public function updateVacancy(Request $request){
+        $request -> validate([
+            'title' => 'required',
+            'local' => 'required'
+        ]);
         $data = $request->all();
         Vacancy::findOrFail($request->id)->update($data);
         return redirect('/dashboard')->with('msg', 'A vaga foi editada com sucesso!');
