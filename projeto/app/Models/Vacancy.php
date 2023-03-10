@@ -9,7 +9,7 @@ class Vacancy extends Model
 {
     use HasFactory;
     protected $casts = [
-        'items' => 'array'
+        'skills' => 'array'
     ];
     protected $guarded = [];
     // Uma vaga percente a um Usuário
