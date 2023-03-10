@@ -9,6 +9,9 @@
         <!-- Fonte Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">        
         
+        <!-- Favicon -->
+        <link rel="icon" href="/img/logo.png">
+
         <!-- Fonte Google -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
         
@@ -38,7 +41,7 @@
                         </li>
                         @auth
                             <li class="nav-item">
-                                <a href="/dashboard" class="nav-link"><i class="fa-solid fa-address-card"></i> Minhas vagas</a>
+                                <a href="/dashboard" class="nav-link"><i class="fa-solid fa-address-card"></i> Painel</a>
                             </li>
                             <li class="nav-item">
                                 <form action="/logout" method="POST">
