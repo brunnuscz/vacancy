@@ -23,6 +23,14 @@ class VacancyController extends Controller
         }
         return view('welcome', ['vacancies' => $vacancies, 'search' => $search]);
     }
+    // DASHBOARD
+    public function dashboard(){
+        $user = auth()->user();
+        $vacancies = $user->vacancies;
+        $candidates = $user->candidates;
+        return view('dashboard', ['vacancies' => $vacancies, 'candidates' => $candidates]);
+    }
+    
     // FORMULÁRIO DE CRIAR VAGA
     public function createVacancy(){
         return view('vacancies.create-vacancy');
@@ -42,19 +50,12 @@ class VacancyController extends Controller
 
         $vacancy->save();
 
-        return redirect('/')->with('msg', 'Vaga criada com sucesso!');
-    }
-    // DASHBOARD
-    public function dashboard(){
-        $user = auth()->user();
-        $candidates = $user->candidates;
-        $vacancies = $user->vacancies;
-        return view('dashboard', ['vacancies' => $vacancies, 'candidates' => $candidates]);
+        return redirect('/')->with('msg', 'A vaga criada com sucesso!');
     }
     // DELETAR VAGA
     public function destroyVacancy($id){
         Vacancy::findOrFail($id)->delete();
-        return redirect('/dashboard')->with('msg', 'A vaga foi excluída com sucesso!');
+        return redirect('/dashboard')->with('msg', 'A vaga foi deletada com sucesso!');
     }
     // FORMULÁRIO DE EDIÇÃO DE VAGA
     public function editVacancy($id){
@@ -69,6 +70,6 @@ class VacancyController extends Controller
     public function updateVacancy(Request $request){
         $data = $request->all();
         Vacancy::findOrFail($request->id)->update($data);
-        return redirect('/dashboard')->with('msg', 'A vaga foi editda com sucesso!');
+        return redirect('/dashboard')->with('msg', 'A vaga foi editada com sucesso!');
     }
 }

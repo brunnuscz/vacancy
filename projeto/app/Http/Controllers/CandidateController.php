@@ -11,9 +11,11 @@ use App\Models\Candidate;
 
 class CandidateController extends Controller
 {
+    // FORMULÁRIO DE CRIA CANDIDATO
     public function createCandidate(){
         return view('candidates.create-candidate');
     }
+    // SALVAR CANDIDATO
     public function storeCandidate(Request $request){
         $candidate = new Candidate;
 
@@ -25,6 +27,27 @@ class CandidateController extends Controller
 
         $candidate->save();
 
-        return redirect('/')->with('msg', 'Candidato criada com sucesso!');
+        return redirect('/')->with('msg', 'O candidato foi criado com sucesso!');
+    }
+
+    // DELETAR VACANDIDATOGA
+    public function destroyCandidate($id){
+        Candidate::findOrFail($id)->delete();
+        return redirect('/dashboard')->with('msg', 'O candidato foi deletado com sucesso!');
+    }
+    // FORMULÁRIO DE EDIÇÃO DE CANDIDATO
+    public function editCandidate($id){
+        $user = auth()->user();
+        $candidate = Candidate::findOrFail($id);
+        if($user->id != $candidate->user->id){
+            return redirect('/dashboard');
+        }
+        return view('candidates.edit-candidate', ['candidate'=>$candidate]);
+    }
+    // ATUALIZAR CANDIDATO
+    public function updateCandidate(Request $request){
+        $data = $request->all();
+        CanDidate::findOrFail($request->id)->update($data);
+        return redirect('/dashboard')->with('msg', 'O candidato foi editado com sucesso!');
     }
 }
