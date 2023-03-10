@@ -40,70 +40,70 @@
             <div class="row">
                 <div class="col-3">
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="JavaScript"> JavaScript
+                        <input type="checkbox" name="skills[]" value="JavaScript"> JavaScript
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="Node.js"> Node.js
+                        <input type="checkbox" name="skills[]" value="Node.js"> Node.js
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="PHP"> PHP
+                        <input type="checkbox" name="skills[]" value="PHP"> PHP
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="Laravel"> Laravel
+                        <input type="checkbox" name="skills[]" value="Laravel"> Laravel
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="Python"> Python
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="form-group">
-                        <input type="checkbox" name="items[]" value="Django"> Django
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="items[]" value="HTML"> HTML
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="items[]" value="EJS"> EJS
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="items[]" value="CSS"> CSS
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="items[]" value="Bootstrap"> Bootstrap
+                        <input type="checkbox" name="skills[]" value="Python"> Python
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="React"> React
+                        <input type="checkbox" name="skills[]" value="Django"> Django
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="Vue"> Vue
+                        <input type="checkbox" name="skills[]" value="HTML"> HTML
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="Ruby"> Ruby
+                        <input type="checkbox" name="skills[]" value="EJS"> EJS
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="Java"> Java
+                        <input type="checkbox" name="skills[]" value="CSS"> CSS
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="C++"> C++
+                        <input type="checkbox" name="skills[]" value="Bootstrap"> Bootstrap
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="ReactNative"> ReactNative
+                        <input type="checkbox" name="skills[]" value="React"> React
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="C"> C
+                        <input type="checkbox" name="skills[]" value="Vue"> Vue
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="C#"> C#
+                        <input type="checkbox" name="skills[]" value="Ruby"> Ruby
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="Kotlin"> Kotlin
+                        <input type="checkbox" name="skills[]" value="Java"> Java
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="items[]" value="R"> R
+                        <input type="checkbox" name="skills[]" value="C++"> C++
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <input type="checkbox" name="skills[]" value="ReactNative"> ReactNative
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="skills[]" value="C"> C
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="skills[]" value="C#"> C#
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="skills[]" value="Kotlin"> Kotlin
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="skills[]" value="R"> R
                     </div>
                 </div>
             </div>

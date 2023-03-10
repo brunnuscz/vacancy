@@ -17,9 +17,6 @@
         
         <!-- CSS da aplicação -->
         <link rel="stylesheet" href="/css/style.css">
-        
-        <!-- JavaScript da aplicação -->
-        <script src="js/script.js"></script>
     
     </head>
     <body>
@@ -37,7 +34,7 @@
                             <a href="/vacancies/create" class="nav-link"><i class="fa-solid fa-building"></i> Criar vaga </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/users/create" class="nav-link"><i class="fa-solid fa-user-plus"></i> Criar candidato </a>
+                            <a href="/candidates/create" class="nav-link"><i class="fa-solid fa-user-plus"></i> Criar candidato </a>
                         </li>
                         @auth
                             <li class="nav-item">
@@ -66,14 +63,20 @@
                 </div>
             </nav>
         </header>
-        <main>
+        <main class="container">
             @if(session('msg'))
-                <p class="msg">{{ session('msg')}}</p>
+            <div id="apagar_msg" class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                <i class="fa-solid fa-circle-check"></i>
+                {{ session('msg')}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>  
             @endif
             @yield('content')
         </main>
     </body>
 
+    <!-- JavaScript da aplicação -->
+    <script src="js/script.js"></script>
     <!--JS BOOTSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </html>
