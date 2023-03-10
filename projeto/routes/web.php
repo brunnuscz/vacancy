@@ -28,3 +28,6 @@ Route::put('/vacancies/update/{id}', [VacancyController::class, 'updateVacancy']
 
 Route::get('/candidates/create', [CandidateController::class, 'createCandidate'])->middleware('auth');
 Route::post('/candidates', [CandidateController::class, 'storeCandidate']);
+Route::delete('/candidates/delete/{id}', [CandidateController::class, 'destroyCandidate'])->middleware('auth');
+Route::get('/candidates/edit/{id}', [CandidateController::class, 'editCandidate'])->middleware('auth');
+Route::put('/candidates/update/{id}', [CandidateController::class, 'updateCandidate'])->middleware('auth');
