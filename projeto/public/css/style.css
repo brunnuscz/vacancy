@@ -9,14 +9,14 @@ header{
     background-color: #fff;
     border-bottom: 1px solid #ccc;
 }
-.msg{
-    background-color: #D4EDDA;
-    color: #155724;
+.alert-msg{
+    margin: 5px;
     border: 1px solid #C3E6CB;
-    margin-bottom: 0;
     text-align: center;
     padding: 10px;
 }
+
+
 /*NAVBAR*/
 .navbar-color{
     background-color: #122526;
@@ -59,11 +59,32 @@ header{
 }
 
 /*HOMEPAGE*/
-.vacancy-container{
+
+/*card vaga*/
+.card-title{
     text-align: center;
-}
-.vacancy-container h2{
     font-weight: 900;
+    margin-bottom: 20px;
+}
+.card-info{
+    color: #212121;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.container-cards{
+    margin: auto;
+    margin-bottom: 100px;
+    align-items: center;
+}
+.skill{
+    text-align: center;
+    padding: 0;
+}
+.card-vacancy{
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 /*search*/
@@ -86,39 +107,35 @@ header{
 }
 
 /*card vacancy*/
-#vacancy-container{
-    padding: 50px;
-    display: flex;
-}
+
 .title-vacancy h2{
     width: 100%;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    color: #122526;
+    font-size: 35px;
 }
-#vacancy-container h3{
+#vacancies-container h3{
     margin-bottom: 10px;
-    color: #757575;
+    color: hsl(0, 0%, 46%);
 }
-#vacancy-container .card{
-    flex: 1 1 20%;
-    width: 400px;
+#cards-container{
+    width: 300px;
+}
+#cards-container p{
+    text-align: center;
+    color: hsl(0, 0%, 46%);
+}
+
+#vacancies-container .card{
+    width: 90%;
     border-radius: 10px;
     padding: 0;
     margin: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
 }
-.card .card-title{
-    text-align: center;
-    color: #212121;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-.card .card-info{
-    color: #212121;
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
+
 .btn-ver-mais{
     text-align: center;
 }
@@ -169,3 +186,6 @@ header{
     margin: 5px;
     width: 120px;
 }
+
+
+
