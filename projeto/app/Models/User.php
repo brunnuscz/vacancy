@@ -62,4 +62,7 @@ class User extends Authenticatable
     public function vacancies(){
         return $this->hasMany('App\Models\Vacancy');
     }
+    public function candidates(){
+        return $this->hasMany('App\Models\Candidate');
+    }
 }
