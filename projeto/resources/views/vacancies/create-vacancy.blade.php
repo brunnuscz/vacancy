@@ -4,21 +4,27 @@
 
 <div id="vacancy-create-container" class="col-md-6 offset-md-3">
     <h1>Crie uma vaga</h1>
-    <form action="/vacancies" method="POST">
+    <form action="/vacancy" method="POST">
         @csrf
         <div class="form-group mt-3">
-            <label for="title">Vaga: </label>
+            <label for="title">Vaga: </label><small class="text-error"> *</small>
             <input type="text" class="form-control" id="title" name="title" placeholder="Título da vaga">
+            @error('title')
+                <span class="text-error"><small>{{$message}}</small></span>
+            @enderror
         </div>
         <div class="form-group mt-3">
-            <label for="title">Local: </label>
+            <label for="title">Local: </label><small class="text-error"> *</small>
             <input type="text" class="form-control" id="local" name="local" placeholder="Local da vaga">
+            @error('local')
+                <span class="text-error"><small>{{$message}}</small></span>
+            @enderror
         </div>
         
         <div class="form-group mt-3">
             <div class="row">
                 <div class="col-6">
-                    <label for="title">Nível: </label>
+                    <label for="title">Nível: </label><small class="text-error"> *</small>
                     <select name="level" id="level" class="form-control">
                         <option value="Estágio">Estágio</option>
                         <option value="Júnior">Júnior</option>
@@ -27,7 +33,7 @@
                     </select> 
                 </div>
                 <div class="col-6">
-                    <label for="title">Tipo: </label>
+                    <label for="title">Tipo: </label><small class="text-error"> *</small>
                     <select name="type" id="type" class="form-control">
                         <option value="Remoto">Remoto</option>
                         <option value="Presencial">Presencial</option>
@@ -36,7 +42,7 @@
             </div>
         </div>
         <div class="form-group mt-3">
-            <label for="title">Habilidades: </label>
+            <label for="title">Habilidades: </label><small class="text-error"> *</small>
             <div class="row">
                 <div class="col-3">
                     <div class="form-group">
@@ -63,7 +69,7 @@
                         <input type="checkbox" name="skills[]" value="HTML"> HTML
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="skills[]" value="EJS"> EJS
+                        <input type="checkbox" name="skills[]" value="PostgreSQL"> PostgreSQL
                     </div>
                     <div class="form-group">
                         <input type="checkbox" name="skills[]" value="CSS"> CSS
@@ -77,10 +83,10 @@
                         <input type="checkbox" name="skills[]" value="React"> React
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="skills[]" value="Vue"> Vue
+                        <input type="checkbox" name="skills[]" value="MySQL"> MySQL
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="skills[]" value="Ruby"> Ruby
+                        <input type="checkbox" name="skills[]" value="MongoDB"> MongoDB
                     </div>
                     <div class="form-group">
                         <input type="checkbox" name="skills[]" value="Java"> Java

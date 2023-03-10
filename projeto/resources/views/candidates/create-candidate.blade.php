@@ -4,14 +4,17 @@
 
 <div id="vacancy-create-container" class="col-md-6 offset-md-3">
     <h1>Crie um candidato</h1>
-    <form action="/candidates" method="POST">
+    <form action="/candidate" method="POST">
         @csrf
         <div class="form-group mt-3">
-            <label for="name">Nome: </label>
+            <label for="name">Nome: </label><small class="text-error"> *</small>
             <input type="text" class="form-control" id="name" name="name" placeholder="Nome do candidato">
+            @error('name')
+                <span class="text-error"><small>{{$message}}</small></span>
+            @enderror
         </div>
         <div class="form-group mt-3">
-            <label for="title">Habilidades: </label>
+            <label for="title">Habilidades: </label><small class="text-error"> *</small>
             <div class="row">
                 <div class="col-3">
                     <div class="form-group">

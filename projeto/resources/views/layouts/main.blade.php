@@ -34,10 +34,10 @@
                             <a href="/" class="nav-link"><i class="fa-solid fa-house"></i></i> Início </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/vacancies/create" class="nav-link"><i class="fa-solid fa-building"></i> Criar vaga </a>
+                            <a href="/vacancy/create" class="nav-link"><i class="fa-solid fa-building"></i> Criar vaga </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/candidates/create" class="nav-link"><i class="fa-solid fa-user-plus"></i> Criar candidato </a>
+                            <a href="/candidate/create" class="nav-link"><i class="fa-solid fa-user-plus"></i> Criar candidato </a>
                         </li>
                         @auth
                             <li class="nav-item">
@@ -68,8 +68,7 @@
         </header>
         <main class="container">
             @if(session('msg'))
-            <div id="apagar_msg" class="alert alert-success alert-dismissible fade show m-3" role="alert">
-                <i class="fa-solid fa-circle-check"></i>
+            <div id="apagar_msg" class="alert alert-primary alert-dismissible fade show m-3" role="alert">
                 {{ session('msg')}}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>  
