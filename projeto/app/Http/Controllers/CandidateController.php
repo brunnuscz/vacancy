@@ -19,21 +19,18 @@ class CandidateController extends Controller
     public function storeCandidate(Request $request){
         $request -> validate([
             'name' => 'required',
+            'skills' => 'required | min:3'
         ]);
         $candidate = new Candidate;
         $candidate->name = $request->name;
         $candidate->skills = $request->skills;
 
-        if($candidate->skils < 4){
-            return redirect('/candidate/create')->with('msg', 'Atenção! o candidato deve ter no mínimo 3 habilidades');
-        }else{
-            $user = auth()->user();
-            $candidate->user_id = $user->id;
-    
-            $candidate->save();
-    
-            return redirect('/')->with('msg', 'O candidato foi criado com sucesso!');
-        }
+        $user = auth()->user();
+        $candidate->user_id = $user->id;
+
+        $candidate->save();
+
+        return redirect('/dashboard')->with('msg', 'O candidato foi criado com sucesso!');
     }
 
     // DELETAR VACANDIDATOGA
@@ -54,6 +51,7 @@ class CandidateController extends Controller
     public function updateCandidate(Request $request){
         $request -> validate([
             'name' => 'required',
+            'skills' => 'required | min:3'
         ]);
         $data = $request->all();
         CanDidate::findOrFail($request->id)->update($data);

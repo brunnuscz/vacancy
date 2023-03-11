@@ -36,8 +36,23 @@ class VacancyController extends Controller
         $vacancy = Vacancy::findOrFail($id);
         $user = auth()->user();
         $candidates = $user->candidates;
+        $vacancies = $user->vacancies;
+        $listCandidates = array();
+        foreach($candidates as $candidate){           // todos os candidatos
+            $cont = 0;
+            foreach($vacancy->skills as $skillVacancy){
+                foreach($candidate->skills as $skillCandidate){   // todos as skills do candidato
+                    if($skillVacancy == $skillCandidate){    // a skill da vaga é igual a skill do candidato
+                        $cont = $cont + 1;
+                    }
+                }
+            }
+            if($cont >= 3){
+                $listCandidates[] = array($candidate);
+            }
+        }
         $creator = User::where('id', $vacancy->user_id)->first()->toArray();
-        return view('vacancies.show-vacancy', ['vacancy' => $vacancy, 'creator' => $creator, 'candidates' => $candidates]);
+        return view('vacancies.show-vacancy', ['listCandidates'=> $listCandidates, 'vacancy' => $vacancy, /*'listCandidates' => $listCandidates,*/ 'creator' => $creator, 'candidates' => $candidates]);
     }
     // FORMULÁRIO DE CRIAR VAGA
     public function createVacancy(){
@@ -47,7 +62,8 @@ class VacancyController extends Controller
     public function storeVacancy(Request $request){
         $request -> validate([
             'title' => 'required',
-            'local' => 'required'
+            'local' => 'required',
+            'skills' => 'required | min:3'
         ]);
         $vacancy = new Vacancy;
 
@@ -62,7 +78,7 @@ class VacancyController extends Controller
 
         $vacancy->save();
 
-        return redirect('/')->with('msg', 'A vaga criada com sucesso!');
+        return redirect('/dashboard')->with('msg', 'A vaga criada com sucesso!');
     }
     // DELETAR VAGA
     public function destroyVacancy($id){
@@ -82,7 +98,8 @@ class VacancyController extends Controller
     public function updateVacancy(Request $request){
         $request -> validate([
             'title' => 'required',
-            'local' => 'required'
+            'local' => 'required',
+            'skills' => 'required | min:3'
         ]);
         $data = $request->all();
         Vacancy::findOrFail($request->id)->update($data);
