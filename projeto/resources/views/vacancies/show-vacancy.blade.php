@@ -38,34 +38,42 @@
             </div>
         </div>
 
-        <h2 class="text-center mb-4"><strong>Candidatos que atedem aos requesitos da vaga</strong></h2>
+        <h2 class="text-center mb-4"><strong>Candidatos que atendem aos requesitos da vaga</strong></h2>
         <div class="card m-3 p-3">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th class="text-center" scope="col">#</th>
-                        <th class="text-center" scope="col">Nome</th>
-                        <th class="text-center" scope="col">Habilidades</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($candidates as $candidate)
+            @if(count($listCandidates) > 0)
+                <table class="table">
+                    <thead>
                         <tr>
-                            <td class="text-center" scropt="row">{{$loop->index+1}}</td>
-                            <td class="text-center" >{{$candidate->name}}</td>
-                            <td class="text-center">
-                                @foreach($candidate->skills as $skill)
-                                    @if($loop->index+1 == count($candidate->skills))
-                                        <span>{{$skill}}</span>
-                                    @else
-                                        <span>{{$skill}}, </span>
-                                    @endif
-                                @endforeach
-                            </td>
+                            <th class="text-center" scope="col">#</th>
+                            <th class="text-center" scope="col">Nome</th>
+                            <th class="text-center" scope="col">Habilidades</th>
                         </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach($listCandidates as $listCandidate)
+                            @foreach($listCandidate as $candidate)
+                                <tr>
+                                    <td class="text-center" scropt="row">{{$loop->index+1}}</td>
+                                    <td class="text-center" >{{$candidate->name}}</td>
+                                    <td class="text-center">
+                                        @foreach($candidate->skills as $skill)
+                                            @if($loop->index+1 == count($candidate->skills))
+                                                <span>{{$skill}}</span>
+                                            @else
+                                                <span>{{$skill}}, </span>
+                                            @endif
+                                        @endforeach
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endforeach
+                    </tbody>
+                </table>
+            @else
+                <div class="dashboard-title-container">
+                    <p>Nenhum candidato se relaciona com essa vaga...</p>
+                </div>
+            @endif
         </div>
     </div>
 </div>

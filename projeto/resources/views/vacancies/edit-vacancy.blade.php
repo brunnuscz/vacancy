@@ -65,6 +65,9 @@
         </div>
         <div class="form-group mt-3">
             <label for="title">Habilidades: </label><small class="text-error"> *</small>
+            @error('skills')
+                <span class="text-error"><small>{{$message}}</small></span>
+            @enderror
             <div class="row">
                 <div class="col-3">
                     <div class="form-gruop">
@@ -197,7 +200,7 @@
             </div>
         </div>
         <div class="btn-criar">
-            <input type="submit" class="btn btn-success mt-3" value="Editar">
+            <button type="submit" class="btn btn-success mt-3">Editar</button>
         </div>
     </form>
 </div>
