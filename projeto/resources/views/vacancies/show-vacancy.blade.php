@@ -51,9 +51,9 @@
                     </thead>
                     <tbody>
                         @foreach($listCandidates as $listCandidate)
-                            @foreach($listCandidate as $candidate)
-                                <tr>
-                                    <td class="text-center" scropt="row">{{$loop->index+1}}</td>
+                            <tr>
+                                <td class="text-center" scropt="row">{{$loop->index+1}}</td>
+                                @foreach($listCandidate as $candidate)
                                     <td class="text-center" >{{$candidate->name}}</td>
                                     <td class="text-center">
                                         @foreach($candidate->skills as $skill)
@@ -63,9 +63,9 @@
                                                 <span>{{$skill}}, </span>
                                             @endif
                                         @endforeach
-                                    </td>
-                                </tr>
-                            @endforeach
+                                @endforeach
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>

@@ -25,6 +25,12 @@ header{
     width: 30px;
     margin-left: 10px;
 }
+#navbar small{
+    font-size: 15px;
+    font-weight: 900;
+    color: #fff;
+    margin-left: 10px;
+}
 #navbar{
     justify-content: space-between;
     background-color: 5px 0;
@@ -193,6 +199,3 @@ header{
     margin: 5px;
     width: 120px;
 }
-
-
-

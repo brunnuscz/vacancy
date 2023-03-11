@@ -35,14 +35,14 @@ class VacancyController extends Controller
     public function showVacancy($id){
         $vacancy = Vacancy::findOrFail($id);
         $user = auth()->user();
-        $candidates = $user->candidates;
-        $vacancies = $user->vacancies;
+        $candidates = Candidate::all();
+        $vacancies = Vacancy::all();
         $listCandidates = array();
-        foreach($candidates as $candidate){           // todos os candidatos
+        foreach($candidates as $candidate){ // todos os candidatos
             $cont = 0;
-            foreach($vacancy->skills as $skillVacancy){
-                foreach($candidate->skills as $skillCandidate){   // todos as skills do candidato
-                    if($skillVacancy == $skillCandidate){    // a skill da vaga é igual a skill do candidato
+            foreach($vacancy->skills as $skillVacancy){ // todos as skills da vaga
+                foreach($candidate->skills as $skillCandidate){ // todos as skills do candidato
+                    if($skillVacancy == $skillCandidate){ // a skill da vaga é igual a skill do candidato
                         $cont = $cont + 1;
                     }
                 }

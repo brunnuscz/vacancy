@@ -28,6 +28,9 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
                         <img src="/img/logo.png" alt="Icone">
+                        @if($user = auth()->user())
+                            <small>{{$user->name}}</small>
+                        @endif
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">

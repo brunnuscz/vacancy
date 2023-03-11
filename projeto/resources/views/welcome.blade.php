@@ -11,7 +11,7 @@
 
 @if($search)
     <div class="title-vacancy col-md-12">
-        <h2>Pesquisando por: {{$search}}</h2>
+        <h2>Pesquisando por: {{$search}}</h2>     
     </div>
 @else
     <div class="title-vacancy col-md-12">
@@ -24,6 +24,7 @@
     <div class="col-4">
         <div class="card mb-4 card-vacancy">
             <div class="card-body">
+                
                 <h5 class="card-title">{{$vacancy->title}}</h5>
                 <p class="card-info"><strong>Tipo da vaga: </strong>{{$vacancy->type}}</p>
                 <p class="card-info"><strong>Nível: </strong>{{$vacancy->level}}</p>

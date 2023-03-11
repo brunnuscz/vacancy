@@ -17,6 +17,7 @@ class CandidateController extends Controller
     }
     // SALVAR CANDIDATO
     public function storeCandidate(Request $request){
+        // validação
         $request -> validate([
             'name' => 'required',
             'skills' => 'required | min:3'
@@ -24,12 +25,11 @@ class CandidateController extends Controller
         $candidate = new Candidate;
         $candidate->name = $request->name;
         $candidate->skills = $request->skills;
-
+        // pegar o usuário autenticado
         $user = auth()->user();
         $candidate->user_id = $user->id;
-
+        // salvar
         $candidate->save();
-
         return redirect('/dashboard')->with('msg', 'O candidato foi criado com sucesso!');
     }
 
@@ -42,6 +42,7 @@ class CandidateController extends Controller
     public function editCandidate($id){
         $user = auth()->user();
         $candidate = Candidate::findOrFail($id);
+        // medida de segurança
         if($user->id != $candidate->user->id){
             return redirect('/dashboard');
         }
