@@ -52,6 +52,6 @@ Será considerado um diferencial a implementação dos seguintes itens:
     npm install
     npm run dev
 
-### 📍 Após isso basta rodar o comando a seguir, vai mostrar o servidor em execução e para acessar o sistema basta acessar no navegador:
+### 📍 Após isso basta rodar o comando a seguir, vai mostrar o servidor em execução, agora é só acessar a porta no navegador:
 
     php artisan serve
