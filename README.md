@@ -29,7 +29,7 @@ Será considerado um diferencial a implementação dos seguintes itens:
     Livewire (https://laravel-livewire.com/)
 
 ## 📁 Projeto
-### 📍 Fazendo o clone do repositório.
+### 📍 Fazendo o clone do repositório:
 
     git clone https://github.com/brunnuscz/desafio-php-laravel.git
 
@@ -47,7 +47,7 @@ Será considerado um diferencial a implementação dos seguintes itens:
 
     php artisan migrate 
 
-### 📍 É preciso ter o `Node.js` instalado na máquina para seguir em frente. Rode os seguintes comandos.
+### 📍 É preciso ter o `Node.js` instalado na máquina para seguir em frente. Rode os seguintes comandos:
 
     npm install
     npm run dev
