@@ -12,7 +12,7 @@ Este desafio consiste na implementação de uma aplicação PHP utilizando o fra
 Será considerado um diferencial a implementação dos seguintes itens:
 - Criar atenticação de usuários usando os recursos do Laravel; ✅
 - Utilizar uma biblioteca frontend de sua preferência; ✅
-- Inserir o projeto num container docker;
+- Inserir o projeto num container docker; ❌
 
 ## 📚 Alguns dos materiais utilizados
 
@@ -29,34 +29,25 @@ Será considerado um diferencial a implementação dos seguintes itens:
     Livewire (https://laravel-livewire.com/)
 
 ## 📁 Projeto
-### 📍 Fazendo o clone do repositório:
+### 📍 Fazendo o clone do repositório.
 
     git clone https://github.com/brunnuscz/desafio-php-laravel.git
 
-### 📍 Entrando no repositório baixado:
-
-    cd desafio-php-laravel
-
-### 📍 Lembre de ter o `XAMPP` instalado e inicialize o `Apache` e `MySQL`:
+### 📍 Lembre de ter o `XAMPP` instalado. Inicialize o `Apache` e `MySQL`.
 
     https://www.apachefriends.org/pt_br/index.html
 
 ### 📍 Atenção aos comandos necessários para que o projeto funcione corretamente, lembre de rodar todos dentro da pasta `projeto`:
 
     composer install
-    php -r "copy('.env.example', '.env');"
+    php -r "copy('.env.example', '.env');"    
     php artisan key:generate
     
 ### 📍 Edite o arquivo `.env` com as informações do banco de dados, e depois rode o comando a seguir para criar as tabelas, lembre de já ter criado o banco de dados:
 
     php artisan migrate 
 
-### 📍 Para que o sistema de login e cadastro funcione, rode os seguintes comandos no terminal:
-
-    composer require laravel/jetstream
-    php artisan jetstream:install livewire
-
-### 📍 É preciso ter o `Node.js` instalado na máquina. Após instalado rode os seguintes comandos:
+### 📍 É preciso ter o `Node.js` instalado na máquina para seguir em frente. Rode os seguintes comandos.
 
     npm install
     npm run dev
