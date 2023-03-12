@@ -33,7 +33,7 @@ Será considerado um diferencial a implementação dos seguintes itens:
 
     git clone https://github.com/brunnuscz/desafio-php-laravel.git
 
-### 📍 Lembre de ter o `XAMPP` instalado. Inicialize o `Apache` e `MySQL`.
+### 📍 Lembre de ter o `XAMPP` instalado. Inicialize o `Apache` e `MySQL`:
 
     https://www.apachefriends.org/pt_br/index.html
 
