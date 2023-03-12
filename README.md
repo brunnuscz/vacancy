@@ -56,10 +56,6 @@ Será considerado um diferencial a implementação dos seguintes itens:
     composer require laravel/jetstream
     php artisan jetstream:install livewire
 
-### 📍 Após isso rode novamente o comando das migrations:
-
-    php artisan migrate
-
 ### 📍 É preciso ter o `Node.js` instalado na máquina. Após instalado rode os seguintes comandos:
 
     npm install
