@@ -17,7 +17,7 @@ use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\CandidateController;
 
 Route::get('/', [VacancyController::class, 'index']);
-Route::get('/dashboard', [VacancyController::class, 'dashboard'])->middleware('auth');
+Route::get('/panel', [VacancyController::class, 'panel'])->middleware('auth');
 
 Route::get('/vacancy/create', [VacancyController::class, 'createVacancy'])->middleware('auth');
 Route::post('/vacancy', [VacancyController::class, 'storeVacancy']);

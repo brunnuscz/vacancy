@@ -30,13 +30,13 @@ class CandidateController extends Controller
         $candidate->user_id = $user->id;
         // salvar
         $candidate->save();
-        return redirect('/dashboard')->with('msg', 'O candidato foi criado com sucesso!');
+        return redirect('/panel')->with('msg', 'O candidato foi criado com sucesso!');
     }
 
     // DELETAR VACANDIDATOGA
     public function destroyCandidate($id){
         Candidate::findOrFail($id)->delete();
-        return redirect('/dashboard')->with('msg', 'O candidato foi deletado com sucesso!');
+        return redirect('/panel')->with('msg', 'O candidato foi deletado com sucesso!');
     }
     // FORMULÁRIO DE EDIÇÃO DE CANDIDATO
     public function editCandidate($id){
@@ -44,7 +44,7 @@ class CandidateController extends Controller
         $candidate = Candidate::findOrFail($id);
         // medida de segurança
         if($user->id != $candidate->user->id){
-            return redirect('/dashboard');
+            return redirect('/panel');
         }
         return view('candidates.edit-candidate', ['candidate'=>$candidate]);
     }
@@ -56,6 +56,6 @@ class CandidateController extends Controller
         ]);
         $data = $request->all();
         CanDidate::findOrFail($request->id)->update($data);
-        return redirect('/dashboard')->with('msg', 'O candidato foi editado com sucesso!');
+        return redirect('/panel')->with('msg', 'O candidato foi editado com sucesso!');
     }
 }

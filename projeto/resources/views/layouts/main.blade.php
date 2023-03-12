@@ -44,7 +44,7 @@
                         </li>
                         @auth
                             <li class="nav-item">
-                                <a href="/dashboard" class="nav-link"><i class="fa-solid fa-address-card"></i> Painel</a>
+                                <a href="/panel" class="nav-link"><i class="fa-solid fa-address-card"></i> Painel</a>
                             </li>
                             <li class="nav-item">
                                 <form action="/logout" method="POST">
