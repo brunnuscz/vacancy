@@ -37,21 +37,21 @@ Será considerado um diferencial a implementação dos seguintes itens:
 
     cd desafio-php-laravel
 
-### 📍 Lembre de ter o XAMPP instalado e inicialize o Apache e MySQL:
+### 📍 Lembre de ter o `XAMPP` instalado e inicialize o `Apache` e `MySQL`:
 
     https://www.apachefriends.org/pt_br/index.html
 
-### 📍 Atenção aos comandos necessários para que o projeto funcione corretamente:
+### 📍 Atenção aos comandos necessários para que o projeto funcione corretamente, lembre de rodar todos dentro da pasta `projeto`:
 
     composer install
     php -r "copy('.env.example', '.env');"
     php artisan key:generate
     
-### 📍 Edite o arquivo .env com as informações do banco de dados, e depois rode o comando a seguir para criar as tabelas, lembre de já ter criado o banco de dados:
+### 📍 Edite o arquivo `.env` com as informações do banco de dados, e depois rode o comando a seguir para criar as tabelas, lembre de já ter criado o banco de dados:
 
     php artisan migrate 
 
-### 📍 Para que o sistema de login e cadastro funcione, roda os seguintes comando no terminal:
+### 📍 Para que o sistema de login e cadastro funcione, rode os seguintes comandos no terminal:
 
     composer require laravel/jetstream
     php artisan jetstream:install livewire
@@ -60,11 +60,11 @@ Será considerado um diferencial a implementação dos seguintes itens:
 
     php artisan migrate
 
-### 📍 É preciso ter o Node.js instalado na máquina. Após instalado rode os seguintes comandos:
+### 📍 É preciso ter o `Node.js` instalado na máquina. Após instalado rode os seguintes comandos:
 
     npm install
     npm run dev
 
-### 📍 Após isso basta entrar na pasta /projeto pelo terminal e rodar o comando a seguir para rodar o sistema:
+### 📍 Após isso basta rodar o comando a seguir, vai mostrar o servidor em execução e para acessar o sistema basta acessar no navegador:
 
     php artisan serve
