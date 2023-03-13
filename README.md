@@ -34,18 +34,29 @@ Será considerado um diferencial a implementação dos seguintes itens:
     git clone https://github.com/brunnuscz/desafio-php-laravel.git
 
 ### 📍 Atenção aos comandos necessários para que o projeto funcione corretamente, lembre de rodar todos dentro da pasta `projeto`:
+### 1 - Instalando o Composer.
 
     composer install
-    php -r "copy('.env.example', '.env');"    
+    
+### 2 - Após rodar o comando abaixo, edite o arquivo `.env` com informações do banco de dados.
+    
+    php -r "copy('.env.example', '.env');"
+    
+### 3 - Por fim rode o comando abaixo.
+    
     php artisan key:generate
     
-### 📍 Edite o arquivo `.env` com as informações do banco de dados, e depois rode o comando a seguir para criar as tabelas, lembre de já ter criado o banco de dados:
+### 📍 Para criar as tabelas rode o comando a seguir, lembre de já ter criado o banco de dados:
 
-    php artisan migrate 
+    php artisan migrate
 
-### 📍 É preciso ter o `Node.js` instalado na máquina para seguir em frente. Rode os seguintes comandos:
+### 📍 É preciso ter o `Node.js` instalado na máquina para seguir em frente. 
+### 1 - Rode o comando a seguir para instalar o `npm`.
 
     npm install
+    
+### 2 - Por fim rode o comando abaixo.
+
     npm run dev
 
 ### 📍 Após isso basta rodar o comando a seguir, vai mostrar o servidor em execução, agora é só acessar a porta no navegador:
