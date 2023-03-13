@@ -16,17 +16,17 @@ Será considerado um diferencial a implementação dos seguintes itens:
 
 ## 📚 Alguns dos materiais utilizados
 
-    CSS (Cascading Style Sheets)
-    JS (JavaSctipt)
-    Artisan (Auxilia na criação dos model, migrations, etc)
-    Blade (Auxilia a manusear as views)
-    Eloquent (ORM - Objet-Relational Mapping)
-    XAMPP (Apache, MariaDB, PHP, Perl)
-    Laravel (https://laravel.com/)
-    Bootstrap (https://getbootstrap.com/)
-    Composer (https://getcomposer.org/)
-    Jetstream (https://jetstream.laravel.com/)
-    Livewire (https://laravel-livewire.com/)
+- CSS (Cascading Style Sheets)
+- JS (JavaScript)
+- Artisan (Auxilia na criação dos models, migrations, etc)
+- Blade (Auxilia a manusear as views)
+- Eloquent (ORM - Object-Relational Mapping)
+- XAMPP (Apache, MariaDB, PHP, Perl)
+- Laravel (https://laravel.com/)
+- Bootstrap (https://getbootstrap.com/)
+- Composer (https://getcomposer.org/)
+- Jetstream (https://jetstream.laravel.com/)
+- Livewire (https://laravel-livewire.com/)
 
 ## 📁 Projeto
 ### 📍 Fazendo o clone do repositório:
