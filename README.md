@@ -21,7 +21,7 @@ Será considerado um diferencial a implementação dos seguintes itens:
 - Artisan (Auxilia na criação dos models, migrations, etc)
 - Blade (Auxilia a manusear as views)
 - Eloquent (ORM - Object-Relational Mapping)
-- XAMPP (Apache, MariaDB, PHP, Perl)
+- XAMPP (https://www.apachefriends.org/pt_br/index.html)
 - Laravel (https://laravel.com/)
 - Bootstrap (https://getbootstrap.com/)
 - Composer (https://getcomposer.org/)
@@ -32,10 +32,6 @@ Será considerado um diferencial a implementação dos seguintes itens:
 ### 📍 Fazendo o clone do repositório:
 
     git clone https://github.com/brunnuscz/desafio-php-laravel.git
-
-### 📍 Lembre de ter o `XAMPP` instalado. Inicialize o `Apache` e `MySQL`:
-
-    https://www.apachefriends.org/pt_br/index.html
 
 ### 📍 Atenção aos comandos necessários para que o projeto funcione corretamente, lembre de rodar todos dentro da pasta `projeto`:
 
