@@ -55,10 +55,10 @@ Será considerado um diferencial a implementação dos seguintes itens:
 
     npm install
     
-### 2 - Por fim rode o comando abaixo.
+### 2 - Por fim rode o comando abaixo, e deixe rodando em um terminal.
 
     npm run dev
 
-### 📍 Após isso basta rodar o comando a seguir, vai mostrar o servidor em execução, agora é só acessar a porta no navegador:
+### 📍 Após isso basta abrir um outro terminal, certifique que está na pasta `projeto` e rode o comando a seguir, vai mostrar o servidor em execução, agora é só acessar a porta no navegador:
 
     php artisan serve
