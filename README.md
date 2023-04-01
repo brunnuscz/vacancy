@@ -34,7 +34,7 @@ Será considerado um diferencial a implementação dos seguintes itens:
     git clone https://github.com/brunnuscz/desafio-php-laravel.git
 
 ### 📍 Atenção aos comandos necessários para que o projeto funcione corretamente, lembre de rodar todos dentro da pasta `projeto`:
-### 1 - Instalando o Composer.
+### 1 - Tenha o <a href="https://www.apachefriends.org/pt_br/index.html">XAMPP</a> e o <a href="https://getcomposer.org/">Composer</a> instalado na sua máquina. Deixe o `Apache` e o `MySQL` ativo no `XAMPP`. Para instalar o `Composer` no seu projeto, rode o comando a seguir.
 
     composer install
     
