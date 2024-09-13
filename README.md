@@ -66,10 +66,10 @@ Será considerado um diferencial a implementação dos seguintes itens:
 
 ### 📍 Screenshots
 
-<img src="images/previa1.png" width="100%">
-<img src="images/previa2.png" width="100%">
-<img src="images/previa3.png" width="100%">
-<img src="images/previa4.png" width="100%">
-<img src="images/previa5.png" width="100%">
-<img src="images/previa6.png" width="100%">
-<img src="images/previa7.png" width="100%">
+<img src="doc/previa1.png" width="100%">
+<img src="doc/previa2.png" width="100%">
+<img src="doc/previa3.png" width="100%">
+<img src="doc/previa4.png" width="100%">
+<img src="doc/previa5.png" width="100%">
+<img src="doc/previa6.png" width="100%">
+<img src="doc/previa7.png" width="100%">
