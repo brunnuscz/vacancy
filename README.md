@@ -62,3 +62,14 @@ Será considerado um diferencial a implementação dos seguintes itens:
 ### 📍 Após isso basta abrir um outro terminal, certifique que está na pasta `projeto` e rode o comando a seguir, vai mostrar o servidor em execução, agora é só acessar a porta no navegador:
 
     php artisan serve
+
+
+### 📍 Screenshots
+
+<img src="images/previa1.png" width="100%">
+<img src="images/previa2.png" width="100%">
+<img src="images/previa3.png" width="100%">
+<img src="images/previa4.png" width="100%">
+<img src="images/previa5.png" width="100%">
+<img src="images/previa6.png" width="100%">
+<img src="images/previa7.png" width="100%">
