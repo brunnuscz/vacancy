@@ -12,7 +12,7 @@ Este desafio consiste na implementação de uma aplicação PHP utilizando o fra
 Será considerado um diferencial a implementação dos seguintes itens:
 - Criar atenticação de usuários usando os recursos do Laravel; ✅
 - Utilizar uma biblioteca frontend de sua preferência; ✅
-- Inserir o projeto num container docker; ❌
+- Inserir o projeto num container docker; ✅
 
 ## 📚 Alguns dos materiais utilizados
 
