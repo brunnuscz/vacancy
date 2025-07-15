@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('type');
             $table->json('skills');
             $table->timestamps();
+            $table->foreignId('user_id')->constrained();
         });
     }
 

@@ -17,3 +17,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+Makefile
+docker-compose.yml
+Dockerfile
+docker/nginx
