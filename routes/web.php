@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\CandidateController;
+use App\Models\Vacancy;
 
 Route::get('/', [VacancyController::class, 'index']);
 Route::get('/panel', [VacancyController::class, 'panel'])->middleware('auth');
@@ -38,6 +39,15 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('welcome');
+        $search = request('search');
+        if($search){
+            $vacancies = Vacancy::where([
+                ['title', 'like', '%'.$search.'%']
+            ])->get();
+        }else{
+            $vacancies = Vacancy::all();
+        }
+        
+        return view('welcome', ['vacancies' => $vacancies, 'search' => $search]);
     })->name('welcome');
 });
